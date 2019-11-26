@@ -10,7 +10,10 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add(2.2, 44.4), 46.6)
 
     def test_subtract_integer(self):
-        self.assertEqual(calculator.subtract(9, 5), 4)               
+        self.assertEqual(calculator.subtract(9, 5), 4)
+
+    def test_subtract_float(self):
+        self.assertAlmostEqual(calculator.subtract(99.9, 88.8), 11.1)                  
 
 if __name__ == '__main__':
     unittest.main()
