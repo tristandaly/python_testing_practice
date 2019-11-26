@@ -16,7 +16,16 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(calculator.subtract(99.9, 88.8), 11.1)
 
     def test_multiply_integer(self):
-        self.assertEqual(calculator.multiply(5, 5), 25)                      
+        self.assertEqual(calculator.multiply(5, 5), 25)
+
+    def test_multiply_float(self):
+        self.assertEqual(calculator.multiply(30.9, 77.5), 2394.75)
+
+    def test_divide_integer(self):
+        self.assertEqual(calculator.divide(10, 5), 2)
+
+    def test_divide_integer_with_remainder(self):
+        self.assertEqual(calculator.divide(10, 6), str(1.4))            
 
 if __name__ == '__main__':
     unittest.main()
